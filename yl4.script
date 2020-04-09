@@ -1,18 +1,18 @@
 #!/bin/bash
-#
+#kellaaja võtmine ja tervituse väljastamine
 kell=`date | cut -c12-13`
 #
 if [ $kell -gt 6 -a $kell -lt 12 ]; then
         tervitus="tere hommikust, "
 elif [ $kell -ge 12 -a $kell -lt 16 ]; then
-        tervitus="Tere paevast, "
+        tervitus="Tere päevast, "
 elif [ $kell -ge 16 -a $kell -lt 20 ]; then
-        tervitus="Tere ohtust, "
+        tervitus="Tere õhtust, "
 else
-        tervitus="Head ood, "
+        tervitus="Head ööd, "
 fi
 echo
-echo -n "$tervitus "
+echo -n "$tervitus"
 echo -n `who am i | cut -f1 -d"." | cut -c1 | tr [:lower:] [:upper:]`
 echo -n `who am i | cut -f1 -d"." | cut -c2-`
 echo "!"
