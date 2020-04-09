@@ -1,4 +1,6 @@
 #!/bin/bash
+#küsib vanuse ja väljastab vanusele vastava kategooria
+# test peab olema ja seda ei tohi ümber nimetada
 vanus=0
 echo -n "Sisesta (oma) vanus: "
 read vanus
