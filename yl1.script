@@ -1,0 +1,15 @@
+#!/bin/bash
+vanus=0
+echo -n "Sisesta (oma) vanus: "
+read vanus
+if test $vanus -gt 0 -a $vanus -lt 11 ; then
+ echo "Oled laps"
+elif test $vanus -lt 18; then
+ echo "Oled nooruk"
+elif test $vanus -lt 63; then
+ echo "Oled täiskasvnu"
+elif test $vanus -gt 63 -o $vanus -eq 63; then
+ echo "Oled seenior"
+else
+ echo"Vanus negatiivne või sisestatud vanus polnud täisarv"
+fi
